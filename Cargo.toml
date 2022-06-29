@@ -1,13 +1,13 @@
 [package]
 name = "braque"
 description = "Split image into tiles and scramble/unscramble them based on a seed."
-version = "0.1.0-alpha.0"
+version = "0.1.0"
 authors = ["Teh Uncle Dolan"]
 license = "BSD-3-Clause"
 edition = "2021"
 repository = "https://github.com/TehUncleDolan/braque"
 readme = "README.md"
-keywords = ["image scramble", "pycasso"]
+keywords = ["image-scramble", "pycasso"]
 categories = ["algorithms", "multimedia"]
 
 [[bin]]
