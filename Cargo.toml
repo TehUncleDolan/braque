@@ -1,0 +1,29 @@
+[package]
+name = "braque"
+description = "Split image into tiles and scramble/unscramble them based on a seed."
+version = "0.1.0-alpha.0"
+authors = ["Teh Uncle Dolan"]
+license = "BSD-3-Clause"
+edition = "2021"
+repository = "https://github.com/TehUncleDolan/braque"
+readme = "README.md"
+keywords = ["image scramble", "pycasso"]
+categories = ["algorithms", "multimedia"]
+
+[[bin]]
+name = "braque"
+path = "src/bin/braque.rs"
+required-features = ["cli"]
+
+[dependencies]
+clap = { version = "3.0", features = ["derive"], optional = true }
+eyre = { version = "0.6", optional = true }
+image = { version = "0.24", default-features = false, features = ["jpeg_rayon", "png"]}
+# Waiting for https://github.com/rust-lang/rust/issues/88581
+num-integer = "0.1"
+
+[dev-dependencies]
+hex-literal = "0.3.4"
+
+[features]
+cli = ["clap", "eyre"]
